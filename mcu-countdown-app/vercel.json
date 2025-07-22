@@ -1,5 +1,0 @@
-{
-  "routes": [
-    { "src": "/(.*)", "dest": "/mcu-countdown-app/index.html" }
-  ]
-}
