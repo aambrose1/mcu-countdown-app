@@ -1,7 +1,4 @@
 {
-  "builds": [
-    { "src": "mcu-countdown-app/index.html", "use": "@vercel/static-build", "config": { "distDir": "mcu-countdown-app/dist" } }
-  ],
   "routes": [
     { "src": "/(.*)", "dest": "/mcu-countdown-app/index.html" }
   ]
