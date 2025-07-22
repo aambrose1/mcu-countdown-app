@@ -33,7 +33,6 @@ jobs:
 
       - name: Install dependencies & build project
         run: |
-          cd mcu-countdown-app
           npm ci
           npm run build
         env:
