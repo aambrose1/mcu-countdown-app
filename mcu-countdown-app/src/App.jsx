@@ -47,10 +47,10 @@ function App() {
   }, [data, date]);
 
   return (
-    <>
-      <header>
+    <div className='container'>
+      <header className='header'>
         <img className='logo' src={marvelLogo} alt='Marvel Studios Logo'/>
-        <h2>On this day</h2>
+        <h2>Upcoming Movie/Show</h2>
         <DatePicker className='datepicker'
           selected={date}
           onChange={(date) => setDate(date)}
@@ -61,7 +61,7 @@ function App() {
         { isLoading ? <p>Loading...</p> : <Card data={data}></Card>}
         { errorMessage? <p>{errorMessage}</p> : <p></p>}
       </div>
-    </>
+    </div>
   )
 }
 

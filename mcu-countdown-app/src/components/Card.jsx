@@ -17,12 +17,20 @@ function Card({data: {title, release_date, type, days_until, overview, poster_ur
 
     return ( 
         <div className='card'>
-            <i>{type}</i> <br/>
             <img src={poster_url} alt='Movie poster'/>
-            <div>
-                <h2>{days_until}</h2> <p>Days until</p> <h3>{title}</h3>
-                <p>Releases on <b>{releaseDate}</b></p>
-                <p>{overview}</p>
+            <div className='card-text'>
+                <div className='card-header'>
+                    <h2>{days_until}</h2> {days_until > 0 ? 'Days until':'Days since'}
+                </div>
+                    <span className="no-break">
+                        <h3>{title}</h3> 
+                        <i>({type})</i>
+                    </span>
+                        <br></br>
+                    <span className="no-break">
+                        {days_until > 0 ? 'Releases on' : 'Released on'} <b>{releaseDate}</b>
+                    </span>
+                    <p>{overview}</p>
             </div>
         </div>
     );
