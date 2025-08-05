@@ -51,8 +51,9 @@ function App() {
       <header className='header'>
         <img className='logo' src={marvelLogo} alt='Marvel Studios Logo'/>
         <h2>Upcoming Movie/Show</h2>
-        <DatePicker className='datepicker'
+        <DatePicker
           selected={date}
+          showIcon
           onChange={(date) => setDate(date)}
         />
         <br/>
